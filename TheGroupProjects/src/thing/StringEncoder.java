@@ -69,13 +69,9 @@ public class StringEncoder {
 		for(int i = 0;i < msg.length();i++)
 		{
 			char ch = msg.charAt(i);
-			
 			int c = ch - 'A' + 1;
-			
 			c--;
-			
 			ch = (char)(c - 1 + 'A');    
-			
 			decrypted += ch;
 		}
 		
