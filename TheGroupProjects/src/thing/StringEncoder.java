@@ -39,7 +39,7 @@ public class StringEncoder {
 			}
 			}
 				
-		}while(option == 1 || option == 2);
+		} while(option == 1 || option == 2);
 	}
 	
 	public static String encrypt(String msg)
