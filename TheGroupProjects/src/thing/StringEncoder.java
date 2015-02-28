@@ -12,7 +12,7 @@ public class StringEncoder {
 		
 		do
 		{
-			System.out.println("1.) encrypt\n" + "2.) decrypt\n" + "3.) quit");
+			System.out.println("(1) encrypt\n" + "(2) decrypt\n" + "(3) quit");
 			
 			option = keyboard.nextInt();
 			
