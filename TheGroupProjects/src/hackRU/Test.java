@@ -7,5 +7,7 @@ public class Test {
 		System.out.println("This is new package!");
 		System.out.println("Excited for HackRU!");
 		System.out.println("Soooooo ready for Spring Break!");
+		System.out.println("5");
+		
 	}
 }
