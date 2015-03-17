@@ -27,6 +27,8 @@ public class TicTacToe extends JFrame
 	JButton quit;
 	JLabel gap;
 	
+	private static int calls;
+	
 	public TicTacToe() //constructor
 	{
 		this.setTitle("Final Project: Tic Tac Toe");
@@ -74,7 +76,7 @@ public class TicTacToe extends JFrame
 		rbx.setSelected(true);// sets player 'x' as default
 		rbx.addActionListener(new RadioListener());
 		rbo.addActionListener(new RadioListener());	
-		refresh();
+		refresh(); calls++;
 		radioPanel= new JPanel();
 		radioPanel.setLayout(new GridLayout(3,1));
 		radioPanel.add(rbx);
@@ -104,7 +106,7 @@ public class TicTacToe extends JFrame
 				if (!x) 
 				{
 					button.setText ("O");
-					//button.setForeground(Color.CYAN);
+					button.setForeground(Color.BLACK);
 					board[Integer.parseInt(number)] = 2;
 					init();
 					
@@ -136,7 +138,7 @@ public class TicTacToe extends JFrame
 					rbx.setSelected(false);	
 			}
 			
-			refresh();
+			refresh(); calls++;
 		}
 	}
 	
@@ -161,7 +163,17 @@ public class TicTacToe extends JFrame
 			
 			if (x == false)
 			{
-				refresh();
+				refresh(); calls++;
+			}
+			
+			for(int j = 0; j < 9; j++){
+				if(board[j] == 1){
+					jb[j].setForeground(Color.ORANGE);
+				}
+
+				else{
+					jb[j].setForeground(Color.BLACK);
+				}
 			}
 		}
 	}
@@ -238,7 +250,7 @@ public class TicTacToe extends JFrame
 		if (isFull() && canWin() == 0) 
 		{
 			JOptionPane.showMessageDialog(null,"DRAW GAME");
-			refresh();
+			refresh(); calls++;
 			return true;	
 		}
 		
@@ -253,13 +265,13 @@ public class TicTacToe extends JFrame
 		if (canWin() == 1) 
 		{
 			JOptionPane.showMessageDialog(null,"PLAYER X WINS THE GAME!");
-			refresh();
+			refresh(); calls++;
 		}
 
             if (canWin() == 2)
 		{
 			JOptionPane.showMessageDialog(null,"PLAYER O WINS THE GAME!");
-			refresh();
+			refresh(); calls++;
 		}
 	}
 	
@@ -611,8 +623,6 @@ public class TicTacToe extends JFrame
 		}
 	}
 	
-
-
 	public static void main(String [] args)  
 	{
 		 TicTacToe frame = new TicTacToe();
