@@ -106,10 +106,9 @@ public class TicTacToe extends JFrame
 				if (!x) 
 				{
 					button.setText ("O");
-					button.setBackground(Color.GREEN);
+					button.setBackground(Color.ORANGE);
 					board[Integer.parseInt(number)] = 2;
 					init();
-					
 					
 				}
 			}
@@ -172,7 +171,7 @@ public class TicTacToe extends JFrame
 				}
 
 				else{
-					jb[j].setForeground(Color.BLACK);
+					jb[j].setForeground(Color.GREEN);
 				}
 			}
 		}
@@ -618,7 +617,7 @@ public class TicTacToe extends JFrame
 		for (int j = 0; j < 9; j++) 
 		{
 			jb[j].setText("");
-			jb[j].setBackground(Color.WHITE);
+			jb[j].setBackground(Color.BLACK);
 			board[j] = 0;
 		}
 	}
