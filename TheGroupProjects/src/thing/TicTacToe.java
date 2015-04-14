@@ -48,7 +48,7 @@ public class TicTacToe extends JFrame
 		for (int c = 0; c < 9; c++) 
 		{
 			jb[c] = new JButton();
-			jb[c].setBorder(new EtchedBorder(new Color(220, 20, 50), new Color(220, 20, 50)));
+			jb[c].setBorder(new EtchedBorder(new Color(220, 10, 50), new Color(220, 20, 50)));
 			jb[c].addActionListener(new ButtonListener());
 			jb[c].setBackground(Color.WHITE);
 			jb[c].setActionCommand("" + c);
