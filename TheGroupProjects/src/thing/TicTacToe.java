@@ -27,8 +27,6 @@ public class TicTacToe extends JFrame
 	JButton quit;
 	JLabel gap;
 	
-	private static int calls;
-	
 	public TicTacToe() //constructor
 	{
 		this.setTitle("Final Project: Tic Tac Toe");
@@ -76,7 +74,7 @@ public class TicTacToe extends JFrame
 		rbx.setSelected(true);// sets player 'x' as default
 		rbx.addActionListener(new RadioListener());
 		rbo.addActionListener(new RadioListener());	
-		refresh(); calls++;
+		refresh();
 		radioPanel= new JPanel();
 		radioPanel.setLayout(new GridLayout(3,1));
 		radioPanel.add(rbx);
@@ -106,7 +104,11 @@ public class TicTacToe extends JFrame
 				if (!x) 
 				{
 					button.setText ("O");
+<<<<<<< HEAD
 					button.setBackground(Color.ORANGE);
+=======
+					//button.setForeground(Color.CYAN);
+>>>>>>> parent of f4670ae... color situation
 					board[Integer.parseInt(number)] = 2;
 					init();
 					
@@ -137,7 +139,7 @@ public class TicTacToe extends JFrame
 					rbx.setSelected(false);	
 			}
 			
-			refresh(); calls++;
+			refresh();
 		}
 	}
 	
@@ -162,6 +164,7 @@ public class TicTacToe extends JFrame
 			
 			if (x == false)
 			{
+<<<<<<< HEAD
 				refresh(); calls++;
 			}
 			
@@ -173,6 +176,9 @@ public class TicTacToe extends JFrame
 				else{
 					jb[j].setForeground(Color.GREEN);
 				}
+=======
+				refresh();
+>>>>>>> parent of f4670ae... color situation
 			}
 		}
 	}
@@ -249,7 +255,7 @@ public class TicTacToe extends JFrame
 		if (isFull() && canWin() == 0) 
 		{
 			JOptionPane.showMessageDialog(null,"DRAW GAME");
-			refresh(); calls++;
+			refresh();
 			return true;	
 		}
 		
@@ -264,13 +270,13 @@ public class TicTacToe extends JFrame
 		if (canWin() == 1) 
 		{
 			JOptionPane.showMessageDialog(null,"PLAYER X WINS THE GAME!");
-			refresh(); calls++;
+			refresh();
 		}
 
             if (canWin() == 2)
 		{
 			JOptionPane.showMessageDialog(null,"PLAYER O WINS THE GAME!");
-			refresh(); calls++;
+			refresh();
 		}
 	}
 	
@@ -622,6 +628,8 @@ public class TicTacToe extends JFrame
 		}
 	}
 	
+
+
 	public static void main(String [] args)  
 	{
 		 TicTacToe frame = new TicTacToe();
