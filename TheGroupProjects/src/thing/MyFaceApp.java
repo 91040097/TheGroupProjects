@@ -9,7 +9,7 @@ public class MyFaceApp {
 		// TODO Auto-generated method stub
 		//MyFace face1 = new MyFace(500,500);
         MyFace face2 = new MyFace(); // no-argument constructor
-		face2.setExpression("happy");
+		face2.setExpression("mad");
 
 	}
 
