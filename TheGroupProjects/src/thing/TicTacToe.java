@@ -50,7 +50,7 @@ public class TicTacToe extends JFrame
 			jb[c] = new JButton();
 			jb[c].setBorder(new EtchedBorder(new Color(220, 10, 50), new Color(220, 20, 50)));
 			jb[c].addActionListener(new ButtonListener());
-			jb[c].setBackground(Color.WHITE);
+			jb[c].setBackground(Color.BLUE);
 			jb[c].setActionCommand("" + c);
 			gPanel.add(jb[c]);
 			jb[c].setFont(new Font("sans serif", Font.PLAIN, 80));
@@ -98,7 +98,7 @@ public class TicTacToe extends JFrame
 				if (x) 
 				{
 					button.setText ("X");
-					button.setForeground(Color.ORANGE);
+					button.setForeground(Color.GREEN);
 					board[Integer.parseInt(number)] = 1;
 					init();
 				}
@@ -106,7 +106,7 @@ public class TicTacToe extends JFrame
 				if (!x) 
 				{
 					button.setText ("O");
-					button.setBackground(Color.ORANGE);
+					//button.setForeground(Color.BLUE);
 					board[Integer.parseInt(number)] = 2;
 					init();
 					
@@ -167,7 +167,7 @@ public class TicTacToe extends JFrame
 			
 			for(int j = 0; j < 9; j++){
 				if(board[j] == 1){
-					jb[j].setForeground(Color.ORANGE);
+					jb[j].setForeground(Color.BLUE);
 				}
 
 				else{
