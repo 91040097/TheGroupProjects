@@ -106,7 +106,7 @@ public class TicTacToe extends JFrame
 				if (!x) 
 				{
 					button.setText ("O");
-					button.setForeground(Color.BLUE);
+					//button.setForeground(Color.BLUE);
 					board[Integer.parseInt(number)] = 2;
 					init();
 					
