@@ -17,7 +17,8 @@ public class DownloadPage {
         // Make a URL to the web page
         //URL url = new URL("http://colleges.usnews.rankingsandreviews.com/best-colleges/rankings/national-universities?int=9ff208");
         
-        URL url = new URL("http://www.powerscore.com/sat/help/average_test_scores.cfm");
+    	URL url = new URL("http://www.powerscore.com/sat/help/average_test_scores.cfm");
+    	//URL url = new URL("http://njmonthly.com/articles/towns-schools/top-schools-alphabetical-list");
         // Get the input stream through URL Connection
         URLConnection con = url.openConnection();
         InputStream is =con.getInputStream();
